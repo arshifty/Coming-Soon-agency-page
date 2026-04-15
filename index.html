@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalTech Agency</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <!-- BACKGROUND -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="glass">
+
+            <h4 class="text-uppercase text-muted mb-3" style="letter-spacing:2px;">
+                Elevate Your Vision
+            </h4>
+
+            <h1 class=" fw-bold mb-3">
+                Build Your Brand with
+            </h1>
+
+            <h2 class=" fw-bold gradient-text">
+                Precision & Style
+            </h2>
+
+            <p class="lead mt-3">
+                We help businesses grow with modern design, SEO and marketing.
+            </p>
+
+
+            <div class="countdown">
+                <div class="time-box"> <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box"> <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box"> <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box"> <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="btn btn-brand mt-3">Get Started</a>
+
+            <ul class="features">
+                <li>Custom Design</li>
+                <li>SEO Optimized</li>
+                <li>24/7 Support</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-4 text-center">
+        <div class="container">
+
+            <h2 class="fw-bold mb-4">Our Services</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="service">
+                        <h5>Web Design</h5>
+                        <p>Modern responsive websites.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service">
+                        <h5>SEO Optimization</h5>
+                        <p>Rank higher on Google.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="service">
+                        <h5>Marketing</h5>
+                        <p>Grow your business online.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="py-4 bg-light text-center">
+        <div class="container">
+
+            <h2 class="fw-bold mb-5">Pricing Plans</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h5>Basic</h5>
+                        <h2>$49</h2>
+                        <p>1 Page Website</p>
+                        <p>Basic SEO</p>
+                        <button class="btn btn-brand">Choose</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pricing-card popular">
+                        <h5>Standard ⭐</h5>
+                        <h2>$99</h2>
+                        <p>5 Pages Website</p>
+                        <p>SEO + Speed</p>
+                        <button class="btn btn-brand">Choose</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h5>Premium</h5>
+                        <h2>$199</h2>
+                        <p>Full Website</p>
+                        <p>SEO + Marketing</p>
+                        <button class="btn btn-brand">Choose</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section id="contact" class="py-4 text-center">
+        <div class="container">
+
+            <h2 class="fw-bold mb-4">Get Free Consultation</h2>
+
+            <form id="waitlist-form" action="https://formspree.io/f/xvzvakpj" method="POST" style="max-width:400px; margin:auto;">
+
+                <input type="email" name="email" class="form-control mb-3" placeholder="Enter your email" required>
+
+                <button type="submit" id="submit-btn" class="btn btn-brand w-100">Get Started</button>
+
+            </form>
+
+            <p class="message">
+                <span class="pulse-dot"></span> 128+ people already joined the waitlist
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p>© 2026 DigitalTech Agency</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+<script>
+    //  Change Launch Date Here 
+    const launchDate = new Date("June 30, 2026 00:00:00").getTime();
+
+    const countdownFunction = setInterval(function () {
+
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+        document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.querySelector(".countdown").innerHTML = "WE ARE LIVE!";
+        }
+    }, 1000);
+
+</script>
+
+<script>
+    const form = document.getElementById("waitlist-form");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const status = document.querySelector(".message");
+        const data = new FormData(event.target);
+        const button = document.getElementById("submit-btn");
+
+        button.innerHTML = "Sending...";
+        button.disabled = true;
+
+        fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                // Success!
+                status.innerHTML = "✨ Thanks! You've been added to the list.";
+                form.reset();
+                button.innerHTML = "Joined!";
+            } else {
+                response.json().then(data => {
+                    if (Object.hasOwn(data, 'errors')) {
+                        status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                    } else {
+                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    }
+                    button.disabled = false;
+                    button.innerHTML = "Join Waitlist";
+                })
+            }
+        }).catch(error => {
+            status.innerHTML = "Oops! Network error. Please try again.";
+            button.disabled = false;
+            button.innerHTML = "Join Waitlist";
+        });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+</script>
